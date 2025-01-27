@@ -1,0 +1,10 @@
+import { Platform } from "react-native";
+
+export const appwriteConfig = {
+    endpoint: 'Your cloud website name',
+    Platform: 'your package name',
+    projectId: 'project id',
+    databaseId: 'your database id',
+    userCollectionId: 'your collection id for users',
+    videoCollectionId: 'your collection id for videos'
+}
