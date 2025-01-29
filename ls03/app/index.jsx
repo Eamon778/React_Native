@@ -6,9 +6,13 @@ import { ScrollView } from 'react-native'
 import { images } from '../constants'
 import CustomButton from '../components/CustomButton'
 import { StatusBar } from 'expo-status-bar'
+import { useGlobalContext } from '../context/GlobalProvider'
 
 
 const Index = () => {
+  const { isLoading, isLoggedIn } = useGlobalContext()
+
+  if(!isLoading && isLoggedIn) return <Redirect href='/home' />
   return (
     <SafeAreaView className='bg-[#161622] h-full'>
       <ScrollView contentContainerStyle={{height: '100%'}}>
